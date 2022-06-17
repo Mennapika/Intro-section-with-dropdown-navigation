@@ -56,10 +56,10 @@ export const NavBar = () => {
             </ul>
             </li>
             <li className='m-6 group'> <a  className='cursor-pointer' onClick={handleClickC} > Company</a>  <i onClick={handleClickC}  className={clickedC?"fa-solid fa-chevron-down mx-2  cursor-pointer":"fa-solid fa-chevron-up mx-2 cursor-pointer "}></i>
-            <ul className= {clickedC?"m-4 flex flex-col justify-between" :"hidden"}>
-            <li className='m-4 flex flex-row justify-between'> <a  className='cursor-pointer' onClick={closeMobileMenu}> History </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <a  className='cursor-pointer' onClick={closeMobileMenu}> OurTeam </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <a  className='cursor-pointer' onClick={closeMobileMenu}> Blog </a></li>
+            <ul className= {clickedC?"m-4 flex flex-col justify-between bg-white w-50 rounded-xl p-5 shadow-md " :"hidden"}>
+            <li className='m-1 flex flex-row justify-between'> <a  className='cursor-pointer' onClick={closeMobileMenu}> History </a></li>
+            <li className='m-1 flex flex-row justify-between'>  <a  className='cursor-pointer' onClick={closeMobileMenu}> OurTeam </a></li>
+            <li className='m-1 flex flex-row justify-between'>  <a  className='cursor-pointer' onClick={closeMobileMenu}> Blog </a></li>
             </ul>
             
             
