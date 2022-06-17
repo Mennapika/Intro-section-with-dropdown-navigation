@@ -15,7 +15,9 @@ module.exports = {
     fontSize:{
       'text-lg':'1.125rem'
     },
-    extend: {},
+    extend: {
+      visibility: ["group-hover"],
+    },
   },
   plugins: [],
 }
