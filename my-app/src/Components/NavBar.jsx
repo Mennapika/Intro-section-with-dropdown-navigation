@@ -16,7 +16,7 @@ export const NavBar = () => {
  const handleClickC=()=> setClickedC(!clickedC);
  const closeMobileMenu=()=>setClicked(false);
   return (
-    <div className='flex flex-row  justify-between  max-w-full h-3/5   bg-white text-lg p-3'>
+    <div className='flex flex-row  justify-between  max-w-full h-3/5   bg-gray-50 text-lg p-3'>
         <div className='flex flex-row  justify-start'>
       <div className='m-5 p-2'>
          <img  src={logo} alt="logo"/>
@@ -46,13 +46,13 @@ export const NavBar = () => {
           </ul>
 
       <div className='px-4'>
-          <ul className='flex flex-row justify-start  bg-gray rounded-xl'>
+          <ul className='flex flex-row justify-start '>
             <li className='m-6'><a  className='cursor-pointer' onClick={handleClickF}> Features </a> <i onClick={handleClickF} className={clickedF?"fa-solid fa-chevron-down mx-2 ":"fa-solid fa-chevron-up mx-2 "}></i> 
-            <ul className= {clickedF?"m-4 flex flex-col justify-between" :"hidden"}>
-            <li className='m-4 flex flex-row justify-between'>  <img src={todo}alt='todoList' height="10" className='m-1 cursor-pointer'/><a  className='cursor-pointer' onClick={closeMobileMenu}> TodoList </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <img src={calender}alt='calender' height="10" className='m-1 cursor-pointer' /><a  className='cursor-pointer' onClick={closeMobileMenu}> Calendar </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <img src={reminders}alt='reminders' width="18" className='m-1 cursor-pointer'/><a  className='cursor-pointer' onClick={closeMobileMenu}> Reminders </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <img src={planning}alt='planning' width="18" className='m-1 cursor-pointer'/><a  className='cursor-pointer' onClick={closeMobileMenu}> Planning </a></li>
+            <ul className= {clickedF?"m-4 flex flex-col justify-between bg-white w-50 rounded-xl p-3 shadow-md" :"hidden"}>
+            <li className='m-2 flex flex-row justify-between'>  <img src={todo}alt='todoList' height="10" className='m-1 cursor-pointer'/><a  className='cursor-pointer' onClick={closeMobileMenu}> TodoList </a></li>
+            <li className='m-2 flex flex-row justify-between'>  <img src={calender}alt='calender' height="10" className='m-1 cursor-pointer' /><a  className='cursor-pointer' onClick={closeMobileMenu}> Calendar </a></li>
+            <li className='m-2 flex flex-row justify-between'>  <img src={reminders}alt='reminders' width="18" className='m-1 cursor-pointer'/><a  className='cursor-pointer' onClick={closeMobileMenu}> Reminders </a></li>
+            <li className='m-2 flex flex-row justify-between'>  <img src={planning}alt='planning' width="18" className='m-1 cursor-pointer'/><a  className='cursor-pointer' onClick={closeMobileMenu}> Planning </a></li>
             </ul>
             </li>
             <li className='m-6 group'> <a  className='cursor-pointer' onClick={handleClickC} > Company</a>  <i onClick={handleClickC}  className={clickedC?"fa-solid fa-chevron-down mx-2  cursor-pointer":"fa-solid fa-chevron-up mx-2 cursor-pointer "}></i>
