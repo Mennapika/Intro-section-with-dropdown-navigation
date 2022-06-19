@@ -16,7 +16,7 @@ export const NavBar = () => {
  const handleClickC=()=> setClickedC(!clickedC);
  const closeMobileMenu=()=>setClicked(false);
   return (
-    <div className='flex flex-row  justify-between  max-w-full h-3/5   bg-gray-50 text-lg p-3'>
+    <div className='flex flex-row  justify-between  max-w-full h-1/5   bg-gray-50 text-lg p-1'>
         <div className='flex flex-row  justify-start'>
       <div className='m-5 p-2'>
          <img  src={logo} alt="logo"/>
