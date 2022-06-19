@@ -7,9 +7,7 @@ module.exports = {
     fontFamily: {
       epilogue: ['Epilogue', 'sans-serif'],
     },
-    fontSize:{
-      'text-lg':'1.125rem'
-    },
+   
     extend: {
       visibility: ["group-hover"],
     },
