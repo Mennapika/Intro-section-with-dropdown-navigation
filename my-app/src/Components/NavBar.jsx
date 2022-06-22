@@ -21,42 +21,18 @@ export const NavBar = () => {
       <div className='m-5 p-2'>
          <img  src={logo} alt="logo"/>
       </div>
-      <div onClick={handleClick} className='m-6 hidden'>
-      <i className={ clicked? 'fa-solid fa-xmark text-gray-500 hover:text-black focus:text-black' :'fa-solid fa-bars text-gray-500 hover:text-black focus:text-black'} ></i>
-      </div>
-      <ul className= "flex flex-col justify-between hidden">
-            <li className='m-6'><a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> Features</a> <i onClick={handleClickF} className={clickedF?"fa-solid fa-chevron-down mx-2 text-gray-500 hover:text-black focus:text-black":"fa-solid fa-chevron-up mx-2 text-gray-500 hover:text-black focus:text-black"}></i>
-            <ul className= {clickedF?"m-4 flex flex-col justify-between" :"hidden"}>
-            <li className='m-4 flex flex-row justify-between'>  <img src={todo}alt='todoList' height="10" className='m-1 cursor-pointer'/><a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> TodoList </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <img src={calender}alt='calender' height="10" className='m-1 cursor-pointer' /><a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> Calendar </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <img src={reminders}alt='reminders' width="18" className='m-1 cursor-pointer'/><a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> Reminders </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <img src={planning}alt='planning' width="18" className='m-1 cursor-pointer'/><a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> Planning </a></li>
-            </ul>
-            </li>
-            <li className='m-6'> <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> Company</a> <i onClick={handleClickC} className={clickedC?"fa-solid fa-chevron-down mx-1 text-gray-500 hover:text-black focus:text-black":"fa-solid fa-chevron-up mx-1 text-gray-500 hover:text-black focus:text-black"}></i>
-            <ul className= {clickedC?"m-4 flex flex-col justify-between" :"hidden"}>
-            <li className='m-4 flex flex-row justify-between'> <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> History </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> OurTeam </a></li>
-            <li className='m-4 flex flex-row justify-between'>  <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> Blog </a></li>
-            </ul>
-            
-             </li>
-            <li className='m-6'> <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> Careers</a></li>
-            <li className='m-6'> <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> About</a></li>
-          </ul>
-
       <div className='px-4'>
           <ul className='flex flex-row justify-start '>
-            <li className='m-6'><a  className='cursor-pointer text-gray-500 hover:text-black' onClick={handleClickF}> Features </a> <i onClick={handleClickF} className={clickedF?"fa-solid fa-chevron-down mx-2  text-gray-500 hover:text-black":"fa-solid fa-chevron-up mx-2 text-gray-500 hover:text-black"}></i> 
-            <ul className= {clickedF?"m-4 flex flex-col justify-between bg-white w-50 rounded-xl p-3 shadow-md" :"hidden"}>
+            <li className='m-6 relative'><a  className='cursor-pointer text-gray-500 hover:text-black' onClick={handleClickF}> Features </a> <i onClick={handleClickF} className={clickedF?"fa-solid fa-chevron-down mx-2  text-gray-500 hover:text-black":"fa-solid fa-chevron-up mx-2 text-gray-500 hover:text-black"}></i> 
+            <ul className= {clickedF?"m-4 flex flex-col justify-between bg-white w-50 rounded-xl p-3 shadow-md absolute" :"hidden"}>
             <li className='m-2 flex flex-row justify-between'>  <img src={todo}alt='todoList' height="10" className='m-1 cursor-pointer'/><a  className='cursor-pointer text-gray-500 hover:text-black' onClick={closeMobileMenu}> TodoList </a></li>
             <li className='m-2 flex flex-row justify-between'>  <img src={calender}alt='calender' height="10" className='m-1 cursor-pointer' /><a  className='cursor-pointer text-gray-500 hover:text-black' onClick={closeMobileMenu}> Calendar </a></li>
             <li className='m-2 flex flex-row justify-between'>  <img src={reminders}alt='reminders' width="18" className='m-1 cursor-pointer'/><a  className='cursor-pointer text-gray-500 hover:text-black' onClick={closeMobileMenu}> Reminders </a></li>
             <li className='m-2 flex flex-row justify-between'>  <img src={planning}alt='planning' width="18" className='m-1 cursor-pointer'/><a  className='cursor-pointer text-gray-500 hover:text-black' onClick={closeMobileMenu}> Planning </a></li>
             </ul>
             </li>
-            <li className='m-6 group'> <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={handleClickC} > Company</a>  <i onClick={handleClickC}  className={clickedC?"fa-solid fa-chevron-down mx-2  cursor-pointer text-gray-500 hover:text-black":"fa-solid fa-chevron-up mx-2 cursor-pointer text-gray-500 hover:text-black"}></i>
-            <ul className= {clickedC?"m-4 flex flex-col justify-between bg-white w-50 rounded-xl p-5 shadow-md " :"hidden"}>
+            <li className='m-6 group relative'> <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={handleClickC} > Company</a>  <i onClick={handleClickC}  className={clickedC?"fa-solid fa-chevron-down mx-2  cursor-pointer text-gray-500 hover:text-black":"fa-solid fa-chevron-up mx-2 cursor-pointer text-gray-500 hover:text-black"}></i>
+            <ul className= {clickedC?"m-4 flex flex-col justify-between bg-white w-50 rounded-xl p-5 shadow-md absolute" :"hidden"}>
             <li className='m-1 flex flex-row justify-between'> <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> History </a></li>
             <li className='m-1 flex flex-row justify-between'>  <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> OurTeam </a></li>
             <li className='m-1 flex flex-row justify-between'>  <a  className='cursor-pointer text-gray-500 hover:text-black focus:text-black' onClick={closeMobileMenu}> Blog </a></li>
